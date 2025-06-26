@@ -24,12 +24,12 @@
    ```
 3. **Установи зависимости**
     ```bash
-    pip install -r requirements.txt
+    pip install -r python-dotenv aiogram pandas
     ```
 
 5. **Запусти!**
     ```bash
-    python bot.py
+    python app/app.py
     ```
 
 ## Структура
