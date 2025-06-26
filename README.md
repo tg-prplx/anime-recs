@@ -13,12 +13,6 @@
 - Превью карточки аниме с постером, жанрами, описанием и статусом
 - Максимально дружелюбный UX с кнопками
 
-## Скриншоты
-
-![image](https://github.com/user-attachments/assets/f0131f0e-f241-44b9-9868-99bbbc98e58d)
-![image](https://github.com/user-attachments/assets/54056420-f9e9-4997-ae2e-4d99f601667c)
-
-
 ## Запуск
 
 1. **Клонируй репу и открой её**
@@ -56,6 +50,11 @@ app/
 prototype.py                   # идейная первоначальная реализация
 users.json                     # любимые аниме пользователей
 ```
+## Скриншоты
+
+![image](https://github.com/user-attachments/assets/f0131f0e-f241-44b9-9868-99bbbc98e58d)
+![image](https://github.com/user-attachments/assets/54056420-f9e9-4997-ae2e-4d99f601667c)
+
 
 ## Как добавить/искать
 
