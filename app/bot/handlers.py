@@ -100,7 +100,7 @@ async def cb_add_anime(callback: CallbackQuery):
         user_views[user_id].add(anime_title)
         save_user_views(user_views)
         await callback.answer("Добавлено!")
-    await callback.message.edit_reply_markup(get_anime_inline_kb(anime_title, True))
+    await callback.message.edit_reply_markup(reply_markup=get_anime_inline_kb(anime_title, True))
 
 @dp.callback_query(lambda cq: cq.data.startswith("remove:"))
 async def cb_remove_anime(callback: CallbackQuery):
@@ -112,7 +112,7 @@ async def cb_remove_anime(callback: CallbackQuery):
         await callback.answer("Удалено из твоего списка.")
     else:
         await callback.answer("Этого аниме и так нет в твоём списке.")
-    await callback.message.edit_reply_markup(get_anime_inline_kb(anime_title, False))
+    await callback.message.edit_reply_markup(reply_markup=get_anime_inline_kb(anime_title, False))
 
 @dp.callback_query(lambda cq: cq.data.startswith("details:"))
 async def cb_show_details(callback: CallbackQuery):

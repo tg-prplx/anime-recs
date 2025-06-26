@@ -29,14 +29,14 @@ def get_list_inline_kb():
         ]
     ])    
 
-def get_anime_inline_kb(anime_title, in_list):
+def get_anime_inline_kb(anime_id, in_list):
     return InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton(text="ℹ️ Подробнее", callback_data=f"details:{anime_title}")],
+            [InlineKeyboardButton(text="ℹ️ Подробнее", callback_data=f"details:{anime_id}")],
             [InlineKeyboardButton(
                 text="✅ Уже в списке" if in_list else "➕ Добавить в список",
-                callback_data=f"{'remove' if in_list else 'add'}:{anime_title}"
+                callback_data=f"{'remove' if in_list else 'add'}:{anime_id}"
             )],
-            [InlineKeyboardButton(text="🔍 Похожие", callback_data=f"similar:{anime_title}")]
+            [InlineKeyboardButton(text="🔍 Похожие", callback_data=f"similar:{anime_id}")]
         ]
     )
