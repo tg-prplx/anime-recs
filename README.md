@@ -24,7 +24,7 @@
    ```
 3. **Установи зависимости**
     ```bash
-    pip install -r python-dotenv aiogram pandas
+    pip install -r requirements.txt
     ```
 
 5. **Запусти!**
