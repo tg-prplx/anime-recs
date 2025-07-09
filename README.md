@@ -1,70 +1,63 @@
 ![New Project 5  97DAAF6](https://github.com/user-attachments/assets/5c194461-99f5-4cda-a739-2e61df29f149)
 
-# ARecs (Preview) — аниме-рекомендатор в Telegram
+# ARecs (Preview) — Anime Recommender in Telegram
 
-Простой Telegram-бот на [aiogram 3](https://docs.aiogram.dev/) для ведения персонального списка просмотренного аниме и крутых рекомендаций по твоим вкусам.  
-Работает на локальной базе (аниме, жанры, теги) — приватно, быстро и с фоточками 😊
+A simple Telegram bot built with [aiogram 3](https://docs.aiogram.dev/) for keeping a personal list of watched anime and getting awesome recommendations based on your tastes.  
+Works with a local (offline) database (anime, genres, tags) — private, fast, and supports images 😊
 
-## Особенности
+## Features
+- Saves your anime list (even after restarts!)
+- Personalized recommendations based on what you’ve watched
+- Anime search with typo correction
+- Anime preview cards with poster, genres, description, and status
+- Extremely user-friendly UX with interactive buttons
 
-- Сохраняет твой аниме-лист (даже после перезапуска!)
-- Рекомендации по тем, что уже смотрел
-- Поиск аниме с автоисправлением опечаток
-- Превью карточки аниме с постером, жанрами, описанием и статусом
-- Максимально дружелюбный UX с кнопками
-
-## Запуск
-
-1. **Клонируй репу и открой её**
-2. **Создай файл `.env`**
+## Getting Started
+1. **Clone the repo and open it**
+2. **Create a `.env` file**
    ```
-   BOT_TOKEN=твой_токен_бота
+   BOT_TOKEN=your_bot_token
    ANIME_DB_PATH=app/anime-offline-database.json
    USER_DATA_PATH=users.json
    ```
-3. **Установи зависимости**
+3. **Install dependencies**
     ```bash
     pip install -r requirements.txt
     ```
-
-5. **Запусти!**
+5. **Run the bot!**
     ```bash
     python app/app.py
     ```
 
-## Структура
-
+## Project Structure
 ```
 app/
-⎿ app.py                       # основной бот
-⎿ anime-offline-database.json  # база данных аниме
+⎿ app.py                       # main bot file
+⎿ anime-offline-database.json  # anime database
 ⎿ bot/
-   ⎿ kb.py                     # клавиатуры
-   ⎿ handlers.py               # хендлеры
-   ⎿ utils.py                  # доп инструменты для бота
+   ⎿ kb.py                     # keyboards
+   ⎿ handlers.py               # handlers
+   ⎿ utils.py                  # extra bot utilities
 ⎿ recs/
-  ⎿ tag_freq.py                # зависимость движка рекомендаций
-  ⎿ tag_genres.py              # движок рекомендаций
-  ⎿ fuzzy_search.py            # функция поиска с опечатками и синонимами
+  ⎿ tag_freq.py                # recommendation engine dependency
+  ⎿ tag_genres.py              # recommendation engine
+  ⎿ fuzzy_search.py            # fuzzy search function (typos, synonyms)
 .env
-prototype.py                   # идейная первоначальная реализация
-users.json                     # любимые аниме пользователей
+prototype.py                   # prototype implementation
+users.json                     # user favorite anime list
 ```
-## Скриншоты
 
+## Screenshots
 ![image](https://github.com/user-attachments/assets/f0131f0e-f241-44b9-9868-99bbbc98e58d)
 ![image](https://github.com/user-attachments/assets/54056420-f9e9-4997-ae2e-4d99f601667c)
 
-
-## Как добавить/искать
-
-- Кнопка ➕ Добавить просмотренное аниме — можно через запятую, можно частично, бот сам предложит варианты!
-- "🔥 Получить рекомендации" — выдаст подборку с интерактивом по твоим вкусам (жми на аниме для подробностей и быстрого добавления).
-- Всё сохраняется, можно в любой момент смотреть свой список или очистить его.
+## How to Add/Search Anime
+- The ➕ Add watched anime button — you can enter multiple titles comma-separated or partially, the bot will suggest matches!
+- "🔥 Get recommendations" — you’ll get a selection of suggestions tailored to your tastes (click anime for details and quick add).
+- Everything is saved, you can view or clear your list at any time.
 
 ---
 
-**Open Source forever! Любишь аниме — форкни бота 🙃**  
-Контакты или идеи: [tg @prplx](https://t.me/prplx)
-
-Database taked from https://github.com/manami-project/anime-offline-database
+**Open Source forever! Love anime? Fork the bot 🙃**  
+Contacts and ideas: [tg @prplx](https://t.me/prplx)  
+Database taken from https://github.com/manami-project/anime-offline-database
